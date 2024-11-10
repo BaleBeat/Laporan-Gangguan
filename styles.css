@@ -1,0 +1,179 @@
+/* Global Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px; /* Mengurangi margin bawah agar lebih rapat */
+}
+
+.logo {
+    width: 350px;
+    max-height: 140px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px; /* Ukuran font lebih kecil agar tidak terlalu besar */
+    font-weight: 600; /* Menggunakan ketebalan sedang untuk teks */
+    color: #e60012;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan agar terlihat lebih stylish */
+}
+
+.subtitle {
+    font-size: 18px; /* Menurunkan ukuran font subtitle */
+    color: #555;
+    margin-top: 5px;
+    font-weight: 300;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif; /* Menggunakan font yang sama dengan judul */
+}
+
+/* Content */
+.content {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 18px;
+    background: linear-gradient(145deg, #e60012, #ff2a68);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Membuat logo berada di kiri */
+}
+
+.btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2), -8px -8px 20px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(145deg, #ff2a68, #e60012);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+.btn-icon {
+    width: 40px; /* Ukuran ikon lebih besar */
+    height: 40px;
+    margin-right: 15px; /* Jarak antar ikon dan teks */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.wrapper {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 270px;
+        max-height: 120px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .button-container {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
