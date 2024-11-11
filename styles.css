@@ -3,13 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
     background-color: #fff;
     color: #333;
     font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Wrapper */
@@ -25,6 +27,7 @@ body {
     align-items: center;
     text-align: center;
     border-radius: 15px;
+    -webkit-animation: fadeIn 1.5s ease-in-out;
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -41,10 +44,12 @@ body {
     object-fit: contain;
     margin-bottom: 1.25rem;
     transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
 }
 
 .logo:hover {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 .title {
@@ -102,6 +107,7 @@ body {
     border-radius: 50px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
     width: 80%;
     margin: 0 auto;
     text-transform: uppercase;
@@ -109,6 +115,7 @@ body {
 
 .btn:hover {
     transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2), -8px -8px 20px rgba(255, 255, 255, 0.3);
     background: linear-gradient(145deg, #ff2a68, #e60012);
 }
@@ -135,83 +142,37 @@ body {
 }
 
 /* Animation */
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Responsiveness */
 @media screen and (max-width: 1024px) {
-    .wrapper {
-        padding: 1.5rem;
-    }
-
-    .title {
-        font-size: 1.75rem;
-    }
-
-    .intro {
-        font-size: 1.125rem;
-    }
-
-    .btn {
-        font-size: 1.125rem;
-    }
+    .wrapper { padding: 1.5rem; }
+    .title { font-size: 1.75rem; }
+    .intro { font-size: 1.125rem; }
+    .btn { font-size: 1.125rem; }
 }
 
 @media screen and (max-width: 768px) {
-    .logo {
-        width: 70%;
-        max-height: 120px;
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
-
-    .intro {
-        font-size: 1rem;
-    }
-
-    .btn {
-        font-size: 1rem;
-    }
-
-    .button-container {
-        width: 100%;
-        gap: 0.9375rem;
-    }
-
-    .btn-icon {
-        width: 2.1875rem;
-        height: 2.1875rem;
-    }
+    .logo { width: 70%; max-height: 120px; }
+    .title { font-size: 1.5rem; }
+    .intro { font-size: 1rem; }
+    .btn { font-size: 1rem; }
+    .button-container { gap: 0.9375rem; }
+    .btn-icon { width: 2.1875rem; height: 2.1875rem; }
 }
 
 @media screen and (max-width: 480px) {
-    .wrapper {
-        padding: 1rem;
-    }
-
-    .title {
-        font-size: 1.25rem;
-    }
-
-    .intro {
-        font-size: 0.9375rem;
-    }
-
-    .btn {
-        font-size: 0.875rem;
-        padding: 1rem;
-    }
-
-    .btn-icon {
-        width: 1.875rem;
-        height: 1.875rem;
-    }
+    .wrapper { padding: 1rem; }
+    .title { font-size: 1.25rem; }
+    .intro { font-size: 0.9375rem; }
+    .btn { font-size: 0.875rem; padding: 1rem; }
+    .btn-icon { width: 1.875rem; height: 1.875rem; }
 }
